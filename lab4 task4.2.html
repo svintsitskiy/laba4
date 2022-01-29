@@ -1,0 +1,198 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" name="viewport" content="width=device-width, initial-scale=1">
+      <title>task4.2</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+ </head>
+ <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+        /**Задаємо висоту хедеру**/
+header{
+    height: 800px;
+    background-image: url(background1.jpg);
+}
+        /**Задаємо висоту, колір навігації**/
+navbar{
+  height: 75px;
+  background-color: rovalblue;
+}
+        /**Задаємо висоту, та відступи мейну**/
+main{
+  height: 975px;
+  margin: 75px 100px 75px 100px;
+
+}
+        /**Задаємо блоку display**/
+.gray_box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/**Задаємо параметри блокам 1 та 2**/
+.orange_box1{
+  height: 500px;
+  width: 48%;
+  background-color: tomato;
+}
+.orange_box2{
+  height: 500px;
+  width: 48%;
+  background-color: tomato;
+}
+/**Адаптуємо блоки при меншому розширенні екрану**/
+@media (max-width: 1000px){
+  .orange_box1{
+  height: auto;
+}
+.orange_box2{
+  height: auto;
+}
+main{
+  height: auto;
+}
+}
+/**Задаємо параметри блокам знизу**/
+.brick_box1{
+  height: 100px;
+  width: 48%;
+
+}
+.brick_box2{
+  height: 100px;
+  width: 48%;
+
+}
+/**Задаємо параметри параграфу**/
+.paragraph{
+    text-align: center;
+    font-family: monospace;
+    color: black;
+    height: 200px;
+    margin-bottom: 75px;
+}
+.paragraph p{
+    margin-top: 40px;
+    font-size: 20px;
+}
+/**Адаптуємо параграфи для меншого розширення екрану**/
+@media (max-width: 1000px){
+  .paragraph p{
+  font-size: 14px;
+}
+}
+@media (max-width: 570px){
+  .paragraph p{
+  font-size: 12px;
+}
+}
+
+/**Задаємо параметри футеру**/
+footer{
+  height: 100px;
+  background-color: #043023;
+}
+/**Задаємо параметри навігації (блоку)**/
+.navigation{
+    height: 100px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family:monospace
+}
+/**Задаємо параметри елемнтам навігацій, та додаємо еффект в  секунди після хуверу**/
+.nav_link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color .2s linear;
+}
+/**Задаємо хувер**/
+.nav_link:hover{
+    color: #996b59;
+}
+/** Задаємо параметри для входу**/
+header .entrance{
+    height: 80%;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+    font-family:monospace;
+
+}
+/**Задаємо параметри посиланням та заголовкам входу**/
+.entrance h2 h6 h3{
+    margin-top: 40px;
+}
+.entrance a{
+    text-decoration: none;
+    color: white;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+/**Адаптуємо фото для екранів з малим розширенням**/
+@media (max-width: 1000px){
+img{
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+ <body>
+  <header><!-- Об'являємо наш хедер, де буде міститися навігація по сайту -->
+     <navbar>
+        <!--Навігація -->
+        <div class="navigation">
+            <div>
+            <a class="nav_link" href="aboutme.html">About</a>
+            <a class="nav_link" href="lab4 task4.3.html">Task 4.3</a>
+            <a class="nav_link" href="index.html">Main Page (Personal)</a>
+            </div>
+        </div>
+     </navbar>
+     <div class="entrance">
+        <h6>We are all together</h6>
+        <h1>We are BMW</h1>
+        <h3><a href="#">Watch now!</a></h3>
+        </div>
+  </header>
+  <!-- Об'являємо мейн - головну частину сторінки -->
+   <main>
+    <!-- Об'являємо параграф за зразком -->
+    <div class="paragraph">
+    <h1>Text</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+     <div class="gray_box"><!-- Об'являємо блок для Flexbox, та в CSS робимо так, щоб між двома блоками було місце-->
+       <div class="orange_box1">
+           <img src="square1.jpg">
+       </div><!-- 1 блок -->
+       <div class="orange_box2">
+           <img src="square2.jpg">
+       </div><!-- 2 блок -->
+    </div>
+    <div class="gray_box"><!-- Тут я об'явив 2 блоки, в прикладі на картинці видно ще 2 блоки внизу, але в зразку чомусь їх нема -->
+        <div class="brick_box1 paragraph">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="brick_box2 paragraph">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+   </main>
+
+ </body>
+</html>

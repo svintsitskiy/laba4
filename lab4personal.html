@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Personal Site</title>
+        <!--Для персональної веб-сторінки використав external-CSS, підключивши файл style1.css-->
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <!--Також об'явив внутрішній CSS-->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /**Задаємо висоту хедеру**/
+        header{
+            height: 800px;
+        }
+        /**Задаємо висоту та колір навігації**/
+        navbar{
+        height: 75px;
+        }
+        /**Задаємо фото для шапки**/
+        .head_pic{
+        background-image: url("lapota.jpg");
+        }
+        /**Задаємо навігацій (блок) висоту, величину тексту, завжди високий текст, display flex, шрифт, та розміщення**/
+        .navigation{
+            height: 100px;
+            text-align: center;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-family:monospace
+        }
+        /**Задаємо розміщення елемнтам навігації, відступ, жирність, прибираємо нижнє підкреслення, задаємо колір та еффект після хуверу**/
+        .nav_link{
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 15px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            transition: color .2s linear;
+        }
+        /**Задаємо хувер для навігації**/
+        .nav_link:hover{
+            color: #996b59;
+        }
+        /**Задаємо параметри для блоку входу**/
+        header .entrance{
+            height: 80%;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 50px;
+            font-family:monospace;
+        }
+        /**Задаємо відступ для заголовків**/
+        .entrance h1 h6{
+            margin-top: 40px;
+        }
+        .container1 h2{
+            margin-bottom: 10px;
+        }
+        /**Задаємо колір та прибираємо підкреслення у посилань**/
+        .entrance a{
+            text-decoration: none;
+            color: white;
+        }
+        /**Задаємо ширину та висоту фото 100%**/
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <body>
+        <header class="head_pic">
+            <navbar>
+                <!--Створюємо навігацію та задаємо клас-->
+                <div class="navigation">
+                    <div>
+                        <!--Задаємо клас дял елементів -->
+                    <a class="nav_link" href="lab4 task4.2.html">Task 4.2</a>
+                    <a class="nav_link" href="lab4 task4.3.html">Task 4.3</a>
+                    </div>
+                </div>
+             </navbar>
+             <!--Задаємо клас для входу -->
+             <div class="entrance">
+                <h6>#Webprogramming</h6>
+                <h1>Welcome lab4 website</h1>
+        </div>
+            </header>
+    </body>
+</html>
